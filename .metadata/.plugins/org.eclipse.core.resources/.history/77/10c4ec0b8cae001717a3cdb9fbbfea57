@@ -45,6 +45,47 @@ public class AncestorTest {
 		assertEquals("Check height of BST", 4, bst.height());
 	}
 	
+	@Test
+	public void testDelete() {
+		Ancestor<Integer, Integer> bst = new Ancestor<Integer, Integer>();
+		bst.delete(1);
+		assertEquals("Deleting from empty tree", "()", bst.printKeysInOrder());
+
+		bst.put(7, 7);   //        _7_
+		bst.put(8, 8);   //      /     \
+		bst.put(3, 3);   //    _3_      8
+		bst.put(1, 1);   //  /     \
+		bst.put(2, 2);   // 1       6
+		bst.put(6, 6);   //  \     /
+		bst.put(4, 4);   //   2   4
+		bst.put(5, 5);   //        \
+		                 //         5
+
+		assertEquals("Checking order of constructed tree",
+				"(((()1(()2()))3((()4(()5()))6()))7(()8()))", bst.printKeysInOrder());
+
+		bst.delete(9);
+		assertEquals("Deleting non-existent key",
+				"(((()1(()2()))3((()4(()5()))6()))7(()8()))", bst.printKeysInOrder());
+
+		bst.delete(8);
+		assertEquals("Deleting leaf", "(((()1(()2()))3((()4(()5()))6()))7())", bst.printKeysInOrder());
+
+		bst.delete(6);
+		assertEquals("Deleting node with single child",
+				"(((()1(()2()))3(()4(()5())))7())", bst.printKeysInOrder());
+
+		bst.delete(3);
+		assertEquals("Deleting node with two children",
+				"(((()1())2(()4(()5())))7())", bst.printKeysInOrder());
+		
+		bst.delete(4);
+		assertEquals("Deleting node with two children",
+				"(((()1())2(()5()))7())", bst.printKeysInOrder());
+		
+	}
+
+
 	
 
 }

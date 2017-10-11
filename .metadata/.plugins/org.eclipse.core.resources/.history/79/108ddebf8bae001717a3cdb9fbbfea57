@@ -26,25 +26,8 @@ public class AncestorTest {
 		bst.put(8, 8);
 		assertEquals("Check if it contains something", true, bst.contains(4));
 	}
-	
-	@Test
-	public void testHeight() {
-		Ancestor<Integer, Integer> bst = new Ancestor<Integer, Integer>();
-		assertEquals("Check height of empty BST", -1, bst.height());
 
-		bst.put(7, 7);   //        _7_
-		assertEquals("Check height of BST with one node", 0, bst.height());
-		bst.put(8, 8);   //      /     \
-		bst.put(3, 3);   //    _3_      8
-		bst.put(1, 1);   //  /     \
-		bst.put(2, 2);   // 1       6
-		bst.put(6, 6);   //  \     /
-		bst.put(4, 4);   //   2   4
-		bst.put(5, 5);   //        \
-		//         5
-		assertEquals("Check height of BST", 4, bst.height());
-	}
-	
+
 	
 
 }
