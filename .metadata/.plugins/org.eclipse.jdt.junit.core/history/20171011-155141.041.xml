@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AncestorTest" project="greatestCommonAncestor" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="greatestCommonAncestor.AncestorTest" time="0.003">
+    <testcase name="testContains" classname="greatestCommonAncestor.AncestorTest" time="0.001"/>
+    <testcase name="testHeight" classname="greatestCommonAncestor.AncestorTest" time="0.0"/>
+    <testcase name="testANcestor" classname="greatestCommonAncestor.AncestorTest" time="0.002"/>
+  </testsuite>
+</testrun>

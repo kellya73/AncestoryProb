@@ -58,7 +58,7 @@ public class AncestorTest {
 		bst.put(5, 5);   //        \
 						 //         5
 		
-		assertSame("Check lowest common ancestor of two nodes", 7, bst.lowestCommonAncestor(bst.root, 7, 8));
+		assertSame("Check lowest common ancestor of two nodes", 3, bst.lowestCommonAncestor(bst.root, 2, 5));
 	}
 
 }
