@@ -41,7 +41,7 @@ public class AncestorTest {
 		bst.put(6, 6);   //  \     /
 		bst.put(4, 4);   //   2   4
 		bst.put(5, 5);   //        \
-						 //         5
+		//         5
 		assertEquals("Check height of BST", 4, bst.height());
 	}
 	
