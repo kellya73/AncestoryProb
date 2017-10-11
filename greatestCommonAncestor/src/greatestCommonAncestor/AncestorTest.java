@@ -1,0 +1,33 @@
+package greatestCommonAncestor;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+
+@RunWith(JUnit4.class)
+public class AncestorTest {
+
+	@Test
+	public void testContains() {
+		Ancestor<Integer, Integer> bst = new Ancestor<Integer, Integer>();
+		assertEquals("Check contains of empty BST", false, bst.contains(0));
+		bst.put(7, 7);   //        _7_
+		bst.put(8, 8);   //      /     \
+		bst.put(3, 3);   //    _3_      8
+		bst.put(1, 1);   //  /     \     \
+		bst.put(2, 2);   // 1       6     8
+		bst.put(6, 6);   //  \     /
+		bst.put(4, 4);   //   2   4
+		bst.put(5, 5);   //        \
+		                 //         5
+		bst.put(9,  null);
+		bst.put(8, 8);
+		assertEquals("Check if it contains something", true, bst.contains(4));
+	}
+
+
+	
+
+}
